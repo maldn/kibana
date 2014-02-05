@@ -700,6 +700,8 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
                 min: _.isUndefined(scope.range.from) ? null : scope.range.from.getTime(),
                 max: _.isUndefined(scope.range.to) ? null : scope.range.to.getTime(),
                 timeformat: time_format(scope.panel.interval),
+                monthNames: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+                dayNames: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
                 label: "Datetime",
                 ticks: elem.width()/100
               },
@@ -793,13 +795,13 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
         function time_format(interval) {
           var _int = kbn.interval_to_seconds(interval);
           if(_int >= 2628000) {
-            return "%Y-%m";
+            return "%b %Y";
           }
           if(_int >= 86400) {
-            return "%Y-%m-%d";
+            return "%a<br>%d.%m.%y";
           }
           if(_int >= 60) {
-            return "%H:%M<br>%m-%d";
+            return "%H:%M<br>%a %d.%m";
           }
 
           return "%H:%M:%S";
