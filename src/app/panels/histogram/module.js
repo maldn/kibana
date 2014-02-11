@@ -701,7 +701,7 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
                 max: _.isUndefined(scope.range.to) ? null : scope.range.to.getTime(),
                 timeformat: time_format(scope.panel.interval),
                 monthNames: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
-                dayNames: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
+                dayNames: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
                 label: "Datetime",
                 ticks: elem.width()/100
               },
