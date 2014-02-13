@@ -143,7 +143,7 @@ define([
       var format = function (format, value) {
         switch (format) {
         case 'money':
-          value = numeral(value).format('$0,0.00');
+          value = numeral(value).format('0,0.00');
           break;
         case 'bytes':
           value = numeral(value).format('0.00b');
