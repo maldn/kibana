@@ -24,6 +24,7 @@ vendor/chromath.js
 app/components/kbn.js
 vendor/modernizr-2.6.1.js
 vendor/filesaver.js
+vendor/blob.js
 app/services/dashboard.js
 app/services/fields.js
 app/services/filterSrv.js
@@ -85,6 +86,10 @@ app/panels/filtering/module.js
 ----------------
 app/panels/filtering/module.js
 
+app/panels/goal/module.js
+----------------
+app/panels/goal/module.js
+
 app/panels/histogram/module.js
 ----------------
 app/panels/histogram/interval.js
@@ -106,10 +111,6 @@ app/panels/map/module.js
 ----------------
 app/panels/map/lib/jquery.jvectormap.min.js
 app/panels/map/module.js
-
-app/panels/pie/module.js
-----------------
-app/panels/pie/module.js
 
 app/panels/query/module.js
 ----------------
