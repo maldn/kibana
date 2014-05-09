@@ -149,3 +149,11 @@ app/panels/timepicker/module.js
 app/panels/trends/module.js
 ----------------
 app/panels/trends/module.js
+
+app/panels/valuehistogram/module.js
+----------------
+vendor/jquery/jquery.flot.events.js
+vendor/jquery/jquery.flot.selection.js
+vendor/jquery/jquery.flot.stack.js
+vendor/jquery/jquery.flot.stackpercent.js
+app/panels/valuehistogram/module.js

@@ -61,6 +61,7 @@ function (Settings) {
      */
     panel_names: [
       'histogram',
+      //'valuehistogram',
       'map',
       'goal',
       'table',
