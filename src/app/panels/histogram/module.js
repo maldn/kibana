@@ -634,8 +634,7 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
 
           return csv.join("\n") + "\n";
         };
-          render_panel(data);
-        });
+
 
         // Compute the logarithm of the value converted to the specified base
         function log(x) {
@@ -648,7 +647,7 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
         }
 
         // Compute the ticks for the data set
-        var ticks = function(axis) {          
+        var ticks = function(axis) {
           var ticks = [],
               u = axis.min,
               v = axis.max,
@@ -656,9 +655,9 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
               j = Math.ceil(log(v)),
               n = scope.panel.base % 1 ? 2 : scope.panel.base;
           if (isFinite(j - i)) {
-            for (; i < j; i++) { 
+            for (; i < j; i++) {
               if (i === 0) { ticks.push(0); }
-              for (var k = 1; k < n; k++) { ticks.push(pow(i) * k); } 
+              for (var k = 1; k < n; k++) { ticks.push(pow(i) * k); }
             }
             ticks.push(pow(i));
             for (i = 0; ticks[i] < u; i++) { i; } // strip small values
@@ -667,7 +666,7 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
           }
           return ticks;
         };
-        
+
         var scale = function(series,factor) {
           return _.map(series,function(p) {
             return [p[0],p[1]*factor];
